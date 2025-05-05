@@ -1,14 +1,20 @@
 **Question 1**
 --
--- Paste Question 1 here
+-- ![image](https://github.com/user-attachments/assets/9670bd05-87ad-436d-acdc-fb6ca245d004)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+--create table products(
+product_id INTEGER primary key,
+product_name  TEXT  not NULL,
+list_price  DECIMAL (10, 2)  not NULL check(list_price>=discount and list_price>=0),
+discount  DECIMAL (10, 2)  default 0 not NULL check(discount>=0));
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/2003a739-4333-46ae-8136-4067daf6bb0d)
+
 
 **Question 2**
 ---
