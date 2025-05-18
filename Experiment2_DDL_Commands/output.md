@@ -1,119 +1,176 @@
 **Question 1**
 --
--- Paste Question 1 here
+-- ![image](https://github.com/user-attachments/assets/a0f36994-99ca-4330-bb86-0b9f35bb31a3)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+create table products(
+product_id INTEGER primary key,
+product_name  TEXT  not NULL,
+list_price  DECIMAL (10, 2)  not NULL check(list_price>=discount and list_price>=0),
+discount  DECIMAL (10, 2)  default 0 not NULL check(discount>=0));
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/a8e47517-938e-4e59-aa01-661c68bc2d56)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+-- ![image](https://github.com/user-attachments/assets/66927636-924d-4304-a47b-d8f790b49051)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+create table Employees(
+EmployeeID INTEGER,
+FirstName TEXT,
+LastName TEXT,
+HireDate DATE);
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/59623c11-e266-46d1-9ad5-9ff2667c462c)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/19331baa-57e0-4408-9119-111aaf0b9321)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+create table Shipments(
+ShipmentID INTEGER primary key,
+ShipmentDate DATE,
+SupplierID INTEGER,
+OrderID INTEGER,
+foreign key (SupplierID) references Suppliers(SupplierID),
+foreign key (OrderID) references Orders(OrderID));
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/5eda27bc-173e-4842-a07d-1a2864edc535)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/4c37b7ba-b8b8-4bed-aa85-bd9b6016f382)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+ALTER TABLE Companies
+RENAME name to first_name;
+ALTER TABLE Companies
+ADD COLUMN mobilenumber number;
+ALTER TABLE Companies
+ADD COLUMN DOB Date;
 ```
 
 **Output:**
-
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/aad866be-a4b8-421a-8cb1-378bd3abc979)
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/58130e60-5996-4a69-aafa-6c21f4125d54)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+Create table Employees(
+EmployeeID primary key,
+FirstName NOT NULL,
+LastName NOT NULL,
+Email unique,
+Salary check(Salary>=0),
+DepartmentID INTEGER,
+foreign key (DepartmentID)references Departments(DepartmentID));
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/804180a8-9826-49d0-9624-55f7a2aacd3e)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/3cbc4029-1b33-411d-93a7-fbfda5112fe4)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+ALTER TABLE Student_details
+ADD column Country TEXT 
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/03ca895b-ed6f-40aa-892d-2fe9bfd63f53)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/2591f934-d473-43e0-915b-a74bdbea7f2c)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+INSERT into Products
+select ProductID, ProductName, Price, Stock
+FROM Discontinued_products
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/0636b047-01d4-42bb-88aa-1fe220a3a995)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/873840a0-9bde-42be-958b-cdc5e7253b27)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+create table orders(
+ord_id TEXT NOT NULL check(length(ord_id) = 4),
+item_id TEXT NOT NULL,
+ord_date DATE,
+ord_qty INTEGER,
+cost INTEGER,
+primary key (item_id,ord_date));
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/2eb76233-4400-487f-924a-2230db872fa3)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/0a815f65-bfc1-4006-bca7-0a51b7f41c50)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+INSERT into Products(ProductID,Name,Category,Price,Stock)
+values (101,'Laptop','Electronics',1500,50);
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/3a9543a7-c222-4f98-9e4e-a4d7700faab1)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/7b1e96a7-073b-43d3-9939-5ebcad86798d)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+insert into Employee(EmployeeID,Name,Position,Department,Salary)
+values (2,'John Smith','Developer','IT',75000);
+insert into Employee(EmployeeID,Name,Position,Department,Salary)
+values (3,'Anna Bell','Designer','Marketing',68000);
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/4cb53599-92c8-4d70-9ac8-24a14e9869ea)
+
