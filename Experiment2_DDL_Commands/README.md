@@ -101,7 +101,7 @@ CREATE TABLE Table_Name (
   col_name2 data_type,
   col_name3 data_type DEFAULT 'default_value'
 );
-
+```
 **Question 1**
 --
 -- ![image](https://github.com/user-attachments/assets/a0f36994-99ca-4330-bb86-0b9f35bb31a3)
@@ -114,11 +114,6 @@ product_name  TEXT  not NULL,
 list_price  DECIMAL (10, 2)  not NULL check(list_price>=discount and list_price>=0),
 discount  DECIMAL (10, 2)  default 0 not NULL check(discount>=0));
 ```
-
-**Output:**
-
-![image](https://github.com/user-attachments/assets/a8e47517-938e-4e59-aa01-661c68bc2d56)
-
 
 **Question 2**
 ---
@@ -278,6 +273,5 @@ values (3,'Anna Bell','Designer','Marketing',68000);
 
 ![image](https://github.com/user-attachments/assets/4cb53599-92c8-4d70-9ac8-24a14e9869ea)
 
-```
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
