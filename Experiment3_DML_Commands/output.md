@@ -1,125 +1,158 @@
 **Question 1**
 --
--- ![image](https://github.com/user-attachments/assets/9670bd05-87ad-436d-acdc-fb6ca245d004)
+![image](https://github.com/user-attachments/assets/3b319c53-1884-4192-adb0-72066b11b01d)
+
 
 
 ```sql
---create table products(
-product_id INTEGER primary key,
-product_name  TEXT  not NULL,
-list_price  DECIMAL (10, 2)  not NULL check(list_price>=discount and list_price>=0),
-discount  DECIMAL (10, 2)  default 0 not NULL check(discount>=0));
+update Customer
+set grade=5
+where city='Chennai';
 ```
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/2003a739-4333-46ae-8136-4067daf6bb0d)
+![image](https://github.com/user-attachments/assets/ea3d3a7b-679e-4e26-80ef-828994985a2f)
+
 
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/76fe1896-dc20-4ea2-95df-54a04ebbc052)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+update products
+set sell_price=sell_price*1.10
+where category = 'Bakery';
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/162bc718-90b1-4eb8-b024-f456e1e7b415)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/bbf1247c-7d64-4a12-8371-7e9c71d7784a)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+update products
+set reorder_lvl=reorder_lvl*1.3
+where category='Food'and quantity<reorder_lvl*0.5;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/0278a412-1fed-419e-8921-f9b44b2d58dd)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/e1caa79b-60eb-4719-89b8-f9da0ed5b629)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+update employees
+set first_name='John'
+where department_id=80 and
+commission_pct<0.35;
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/fe9a8ee6-d6dc-49e3-8f99-dc6ffa63f6ac)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/bf8ef655-9420-460f-a82c-bdb4ddf3005e)
 
 ```sql
--- Paste your SQL code below for Question 5
+update suppliers
+set supplier_name=
+upper(supplier_name)
+where contact_person like '%Singh%';
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/fbdea183-1fcb-4bc7-a08e-eba465e990d7)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/db00dbfb-31b0-43cc-bb25-b662509fee81)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+delete from customer
+where cust_city like 'L%';
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/e4f131a2-2d6c-4d94-81e9-8209126644d8)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/adf55a45-c8a4-4e46-9147-b7c68bfb2e45)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+delete from customer
+where length(cust_name)=6;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/7d77cb56-231a-48e9-bffe-b292360da117)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/f485e042-0145-41f5-bf0e-189426a34f7c)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+delete from surgeries
+where surgery_id=3 or surgeon_id=4;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/bd103503-2adc-490e-88df-f999610e41f9)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/88d2e4ae-2e57-4fc9-af36-ee09201792cf)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+delete from doctors
+where doctor_id between 2 and 4;
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/bbe1f4ec-aad8-48e0-aee1-9379c6486b08)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/c3f80b64-2e77-4aca-9d41-73786358ee12)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+delete from Customer
+where (GRADE > 2 and PAYMENT_AMT <(select avg(PAYMENT_AMT) from Customer))
+    or OUTSTANDING_AMT>8000;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/6309efab-c5c1-4d56-976d-87acdea01c84)
+
