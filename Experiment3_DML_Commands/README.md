@@ -44,7 +44,7 @@ Used to retrieve records from a table.
 **Syntax:**
 ```sql
 SELECT column1, column2 FROM table_name WHERE condition;
-
+```
 **Question 1**
 --
 ![image](https://github.com/user-attachments/assets/3b319c53-1884-4192-adb0-72066b11b01d)
