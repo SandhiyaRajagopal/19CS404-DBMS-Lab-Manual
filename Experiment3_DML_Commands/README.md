@@ -203,7 +203,6 @@ where (GRADE > 2 and PAYMENT_AMT <(select avg(PAYMENT_AMT) from Customer))
 
 ![image](https://github.com/user-attachments/assets/6309efab-c5c1-4d56-976d-87acdea01c84)
 
-```
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
